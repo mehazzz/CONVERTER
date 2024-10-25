@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Conversion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .example {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Temperature Conversion: Celsius to Kelvin & Fahrenheit</h1>
+  </header>
+  
+  <main>
+    <section id="celsiusToKelvin">
+      <h2>Celsius to Kelvin</h2>
+      <p>To convert celsuis to kelvin</p>
+      <p>Formula: <code>°C=K-273.15</code></p>
+      <ol>
+        <li>Simply add 273.15 to the Celsius temperature.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Celsius temperature <code>25°C</code></p>
+        <p>Calculation: 25 + 273.15 = 298.15K</p>
+      </div>
+    </section>
+
+    <section id="celsiusToFahrenheit">
+      <h2>Celsius to Fahrenheit</h2>
+      <p>To convert Celsius to Fahrenheit:</p>
+      <p>Formula: <code>°C=(°F-32)×5/9</code></p>
+      <ol>
+        <li>Multiply the Celsius temperature by 9/5.</li>
+        <li>Add 32 to the result.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Celsius temperature <code>25°C</code></p>
+        <p>Calculation: (25 * 9/5) + 32 = 77°F</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

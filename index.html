@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<style>
+body 
+{
+   
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);   
+}
+
+a:link{color:yellow}
+a:visited{color:rgb(236, 236, 236)}
+a:hover{color:rgb(75, 226, 24)}
+    
+li 
+{   display:inline-block;
+    padding-right: 200px;
+    padding-top:20px;
+    padding-bottom: 2px;
+    text-align: right;
+    font-size: large;
+}
+
+.field 
+{
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.popup-image 
+{
+    max-width:96%;
+    height: auto;
+    border-radius: 2500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 1;
+}
+
+
+.field:hover .popup-image 
+{
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in;
+}
+
+</style>
+</head>
+
+<body>
+    <img src="Logo.jpg" width="850" height="200">
+<br><br><br><br>
+    <nav>
+        <ul>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav> 
+                                                   <!-- <font color="black">gfhngfrghgregthgrfghASZDXFcghjkewrtywertytrewxcgvhbjncfhgvjbknlmt</font>       -->
+    <div>
+        <div class="field" onclick="window.location.href='temp.html'">
+        <img src="logo1.jpg" alt="Image 1" class="popup-image">
+        </div>
+
+        <div class="field" onclick="window.location.href='conver.html'">
+        <img src="logo3.jpg" alt="Image 2" class="popup-image">
+        </div>
+    </div>
+
+    <div>
+        <div class="field" onclick="window.location.href='time.html'">
+        <img src="logo2.jpg" alt="Image 3" class="popup-image">
+        </div>
+        
+        <div class="field" onclick="window.location.href='contact.html'">
+        <img src="logo4.jpg" alt="Image 4" class="popup-image">
+        </div>
+    </div>
+</body>
+</html>

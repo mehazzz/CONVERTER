@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decimal Conversion Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .example {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>METHODS FOR CONVERSIONS</h1>
+  </header>
+  
+  <main>
+    
+    
+    <section id="binary to decimal">
+      <h2>Binary to decimal conversion</h2>
+      <p>To convert a binary number to its decimal equuivalent:</p>
+      <ol>
+        <li>Start with the given binary number.</li>
+        <li>Write down the binary digits from right to left, assigning powers of 2 to each digit position.</li>
+        <li>Evaluate the powers of 2 for each digit position.</li>
+        <li>Multiply the respective digit by its corresponding power of 2.</li>
+        <li>Sum up the results obtained in the previous step to get the decimal equivalent.</li>      
+      </ol>
+      <div class="example">
+        <P>example: </P>
+        <img src="bintodec.jpg"></img>
+      </div>
+
+      
+    </section>
+
+    <section id="octalToDecimal">
+      <h2>Octal to decimal conversion</h2>
+      <p>To convert a octal number to its decimal equivalent:</p>
+      <ol>
+        <li>Start with the given octal number.</li>
+        <li>Write down the octal digits from right to left, assigning powers of 8 to each digit position.</li>
+        <li> Evaluate the powers of 8 for each digit position.</li>
+        <li>Multiply the respective digit by its corresponding power of 8. </li>
+        <li> Sum up the results obtained in the previous step to get the decimal equivalent.</li>      
+      </ol>
+      <div class="example">
+        <p>Example: Octal number:  <code>67</code></p>
+        <p><code> (6 * 8^1) + (7 * 8^0).</code><br>
+          <p><code>8^1 = 8 and 8^0 = 1.</code></p>
+         <br>
+        <code>(6 * 8) + (7 * 1) = 48 + 7 = 55. </code><br>
+
+        <p>Decimal number: <code>55</code></p>
+        
+      </div>
+      <section id="hexadecimalToDecimal">
+        <h2>Hexadecimal to decimal conversion</h2>
+        <p>To convert a Hexadecimal number to its decimal equivalent:</p>
+        <ol>
+          <li> Start with the given hexadecimal number.</li>
+          <li>Write down the hexadecimal digits from right to left, assigning powers of 16 to each digit position.</li>
+          <li>Convert any hexadecimal letters (A-F) to their decimal equivalents. </li>
+          <li>Evaluate the powers of 16 for each digit position </li>
+          <li>Multiply the respective digit (including converted letters) by its corresponding power of 16.</li>      
+        </ol>
+        <div class="example">
+          <p>Example: Hexadecimal number  <code>2B6</code></p>
+          <p><code> (2 * 16^2) + (B * 16^1) + (6 * 16^0).</code><br>
+            <p><code>16^2 = 256, 16^1 = 16, and 16^0 = 1.</code></p>
+           <br>
+          <code>(2 * 256) + (11 * 16) + (6 * 1) = 512 + 176 + 6 = 694.</code><br>
+  
+          <p>Decimal number: <code>694</code></p>
+        </div>
+
+
+    </section>
+    
+  </main>
+</body>
+</html>

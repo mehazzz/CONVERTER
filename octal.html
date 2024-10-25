@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Octal Conversion Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .example {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>METHODS FOR CONVERSIONS</h1>
+  </header>
+  
+  <main>
+    <section id="binarytooctal">
+      <h2>Binary to octal conversion</h2>
+      <p>To convert a binary number to its octal equuivalent:</p>
+      <ol>
+
+        <li>Start with the given binary number.</li>
+        <li>Group the binary digits into sets of three digits, starting from the right.</li>
+        <li>If necessary, pad the leftmost group with zeros to make it a set of three digits.
+          In this case, no padding is required as the number of digits is already a multiple of three.</li>
+        <li>Convert each group of three binary digits to its octal equivalent.</li>
+        <li>Combine the octal equivalents obtained from each group to get the final octal number.</li>      
+      </ol>
+      <div class="example">
+        <p>Example: Binary number <code>101110110</code></p>
+        <p><code>101 110 110</code><br>
+         <br>
+        <code>101 in binary is 5 in octal.<br>
+          110 in binary is 6 in octal.<br>
+          110 in binary is 6 in octal. </code><br>
+        <code>101110110 in octal is 566</code></p>
+        <p>Octal number: <code>566</code></p>
+      </div>
+      </section>
+      <section id="decimaltooctal">
+        <h2>Decimal to octal conversion</h2>
+        <p>To convert a decimal number to its octal equuivalent:</p>
+        <ol>
+  
+          <li>Start with the given decimal number.</li>
+          <li>Divide the decimal number by 8.</li>
+          <li> Write down the remainder as the least significant digit (LSB) of the octal number.</li>
+          <li> Continue dividing the quotient obtained in the previous step by 8 until the quotient becomes zero.</li>
+          <li>Write down each remainder obtained from the divisions as subsequent digits of the octal number, from bottom to top.
+          </li>
+        </ol>
+        <div class="example">
+          <p>Example: Deicmal number <code>179</code></p>
+          <p><code>179 ÷ 8 = 22 remainder 3</code><br>
+           <br>
+          <code>Continue dividing 22 by 8:<br>
+          22 ÷ 8 = 2 remainder 6<br>
+          2 ÷ 8 = 0 remainder 2</code><br>
+          <p> The remainders obtained (in reverse order) are 2, 6, 3. Thus, the octal representation of 179 is 263.</p>
+          <p>Octal number: <code>179</code></p>
+      </div>
+        </section>
+        <section id="hexadecimaltooctal">
+          <h2>Hexadecimal to octal conversion</h2>
+          <p>To convert a hexadecimal number to its octal equuivalent:</p>
+          <ol>
+    
+            <li>Start with the given hexadecimal number.</li>
+            <li> Convert the hexadecimal number to its binary equivalent.</li>
+            <li>Group the binary digits into sets of three from the right.</li>
+            <li> If necessary, pad the leftmost group with zeros to make it a set of three digits.
+              In this case, padding is not required.</li>
+            <li>Convert each group of three binary digits to its octal equivalent.
+              
+            </li>
+            <li>
+              Combine the octal equivalents obtained from each group to get the final octal number.
+
+            </li>
+          </ol>
+          <div class="example">
+            <p>Example: Hexadecimal number <code>2AC</code></p>
+            <p><code>2AC</code>in hexadecimal is equivalent to <code>001010101100</code><br></p>
+             <br>
+            <code>001 010 101 100</code><br>
+            <p>
+              <code>
+                001 in binary is 1 in octal.<br>
+010 in binary is 2 in octal.<br>
+101 in binary is 5 in octal.<br>
+100 in binary is 4 in octal.<br>
+              </code>
+            </p>
+            
+          
+            <p>Octal number: <code>1254</code></p>
+        </div>
+        <img src="octaltable.png"></img>
+          </section>
+
+    
+   
+
+    
+  </main>
+</body>
+</html>

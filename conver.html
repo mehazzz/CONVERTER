@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Converter</title>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      background:rgb(225, 225, 223);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input[type="text"], select {
+      padding: 5px;
+      margin-bottom: 6px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    .input1{
+      
+      display: flex;
+      font-size: larger;
+      justify-content: center;
+    
+
+    }
+    nav{
+  
+      
+      color:white;
+      padding: 30px;
+    display: flex;
+    width: 84%;
+    margin: auto;
+    justify-content: space-between;
+    }
+    a{
+      
+      font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+    
+    a:hover{
+      color:chartreuse;
+    }
+    h4{
+      padding:5px;
+      
+    }
+    img{
+      width: 100px;
+    }
+    header{
+      display:flex;
+      background-color: black;
+
+    }
+    
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <image src="conver.jpg"></image>
+  <nav>
+    <a href="binary.html">BINARY</a>
+    <a href="decimal.html">DECIMAL</a>
+    <a href="octal.html">OCTAL</a>
+    <a href="hexadecimal.html">HEXADECIMAL</a>
+    <a href="index.html">HOME</a>
+    
+    
+  </nav>
+  </header>
+
+<h1>Number Converter</h1>
+<div class="input1">
+
+<label for="numberToConvert">Enter Number:</label>
+<input type="text" id="numberToConvert">
+
+<label for="numberBase">Enter Base: </label>
+<input type="text" id="numberBase">
+</div>
+
+
+<label for="convertTo">Convert To:</label>
+<select id="convertTo">
+  <option value="decimal">Decimal</option>
+  <option value="binary">Binary</option>
+  <option value="octal">Octal</option>
+  <option value="hexadecimal">Hexadecimal</option>
+</select>
+
+<button onclick="convert()">Convert</button>
+
+<div id="results"></div>
+
+<script>
+  function convert() {
+    const numberInput = document.getElementById('numberToConvert').value;
+    const numberBase = document.getElementById('numberBase').value;
+    const convertTo = document.getElementById('convertTo').value;
+
+    let result;
+
+     
+      switch (numberBase) {
+        case '2':
+          result = parseInt(numberInput, 2);
+          break;
+        case '10':
+          result = parseFloat(numberInput);
+          break;
+        case '8':
+          result = parseInt(numberInput, 8);
+          break;
+        case '16':
+          result = parseInt(numberInput, 16);
+          break;
+        default:
+          break;
+      }
+
+      switch (convertTo) {
+        case 'binary':
+          result = result.toString(2);
+          break;
+        case 'decimal':
+          result = result;
+          break;
+        case 'octal':
+          result = result.toString(8);
+          break;
+        case 'hexadecimal':
+          result = result.toString(16).toUpperCase();
+          break;
+        default:
+          break;
+      }
+
+      document.getElementById('results').innerHTML = `
+        <h2>Result:</h2>
+        <p>${convertTo.charAt(0).toUpperCase()+convertTo.slice(1)}: ${result}</p>
+      `;
+    
+    };
+  
+  
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hexadecimal Conversion Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .example {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>METHODS FOR CONVERSIONS</h1>
+  </header>
+  
+  <main>
+    <section id="binarytohexadecimal">
+      <h2>Binary to Hexadecimal conversion</h2>
+      <p>To convert a binary number to its hexadecimal equuivalent:</p>
+      <ol>
+       <li>Start with the given binary number.</li>
+       <li>Group the binary digits into sets of four digits from the right.</li>
+       <li> If necessary, pad the leftmost group with zeros to make it a set of four digits.</li>
+       <li>Convert each group of four binary digits to its hexadecimal equivalent.</li>
+       <li>Combine the hexadecimal equivalents obtained from each group to get the final hexadecimal number.</li>
+       </ol>
+      <div class="example">
+        <p>Example: Binary number <code>1011101101</code></p>
+        <p><code>0010 1110 1101</code><br>
+         <br>
+         <p>In this case, padding is required for the leftmost group:</p>
+    <code>0010 becomes 0001 0010.</code><br>
+
+
+    <code>0001 in binary is 1 in hexadecimal.<br>
+          0010 in binary is 2 in hexadecimal.<br>
+          1110 in binary is E in hexadecimal.<br>
+          1101 in binary is D in hexadecimal.</code></p>
+        <p>Hexadecimal number: <code>12ED</code></p>
+      </div>
+      </section>
+
+
+      <section id="decimaltohexadecimal">
+        <h2>Decimal to Hexadecimal conversion</h2>
+        <p>To convert a decimal number to its hexadecimal equuivalent:</p>
+        <ol>
+         <li>Start with the given decimal number.</li>
+         <li>Group the binary digits into sets of four digits from the right.</li>
+         <li> If necessary, pad the leftmost group with zeros to make it a set of four digits.</li>
+         <li>Convert each group of four binary digits to its hexadecimal equivalent.</li>
+         <li>Combine the hexadecimal equivalents obtained from each group to get the final hexadecimal number.</li>
+         </ol>
+        <div class="example">
+          <p>Example: Binary number <code>1011101101</code></p>
+          <p><code>0010 1110 1101</code><br>
+           <br>
+           <p>In this case, padding is required for the leftmost group:</p>
+      <code>0010 becomes 0001 0010.</code><br>
+  
+  
+      <code>0001 in binary is 1 in hexadecimal.<br>
+            0010 in binary is 2 in hexadecimal.<br>
+            1110 in binary is E in hexadecimal.<br>
+            1101 in binary is D in hexadecimal.</code></p>
+          <p>Hexadecimal number: <code>12ED</code></p>
+        </div>
+        </section>
+        <section id="octaltohexadecimal">
+          <h2>Octal to Hexadecimal conversion</h2>
+          <p>To convert a octal number to its hexadecimal equuivalent:</p>
+          <ol>
+           <li>Start with the given octal number.</li>
+           <li>Convert the octal number to its binary equivalent.</li>
+           <li> Group the binary digits into sets of four from the right.</li>
+           <li>If necessary, pad the leftmost group with zeros to make it a set of four digits.</li>
+           <li>Convert each group of four binary digits to its hexadecimal equivalent.</li>
+           <li> Combine the hexadecimal equivalents obtained from each group to get the final hexadecimal number.</li>
+           </ol>
+          <div class="example">
+            <p>Example: Octal number <code>753</code></p>
+            <p>octal equivalent: <code>111 101 011</code><br>
+             <br>
+             <p>grouping: <code>0011 1101 0110</code></p>
+             <p>In this case, padding is required for the leftmost group: </p>
+        <code>0011 becomes 0000 0011</code><br>
+    
+    
+        <code>
+          0000 in binary is 0 in hexadecimal.<br>
+          0011 in binary is 3 in hexadecimal.<br>
+          1101 in binary is D in hexadecimal.<br>
+          0110 in binary is 6 in hexadecimal.
+        </code></p><br>
+            <p>Hexadecimal number: <code>36D6</code></p>
+          </div>
+          <img src="hexatable.jpg"></img>
+          </section>
+
+         
+
+
+
+
+
+
+    
+    
+  </main>
+</body>
+</html>

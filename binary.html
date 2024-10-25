@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Binary Conversion Rules</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    ol {
+      padding-left: 20px;
+    }
+
+    .example {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>METHODS FOR CONVERSIONS</h1>
+  </header>
+  
+  <main>
+    <section id="decimalToBinary">
+      <h2>Decimal to Binary Conversion</h2>
+      <p>To convert a decimal number to its binary equivalent:</p>
+      <ol>
+        <li>Divide the decimal number by 2.</li>
+        <li>Write down the remainder (0 or 1).</li>
+        <li>Continue dividing the quotient by 2 until the quotient becomes 0.</li>
+        <li>Write the remainders in reverse order to get the binary number.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Decimal number <code>10</code></p>
+        <p>Calculation: 10 / 2 = 5 remainder 0<br>
+        5 / 2 = 2 remainder 1<br>
+        2 / 2 = 1 remainder 0<br>
+        1 / 2 = 0 remainder 1</p>
+        <p>Binary number: <code>1010</code></p>
+      </div>
+    </section>
+    <section id="octalToBinary">
+      <h2>Octal to Binary Conversion</h2>
+      <p>To convert an octal number to its binary equivalent:</p>
+      <ol>
+        <li>Convert each octal digit to its 3-bit binary representation.</li>
+        <li>Combine the binary representations to get the final binary number.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Octal number <code>72</code></p>
+        <p>Conversion: Octal 7 (111) Octal 2 (010)</p>
+        <p>Binary number: <code>111010</code></p>
+      </div>
+    </section>
+    <section id="hexadecimalToBinary">
+      <h2>Hexadecimal to Binary Conversion</h2>
+      <p>To convert a hexadecimal number to its binary equivalent:</p>
+      <ol>
+        <li>Convert each hexadecimal digit to its 4-bit binary representation.</li>
+        <li>Combine the binary representations to get the final binary number.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Hexadecimal number <code>1A3</code></p>
+        <p>Conversion: Hexadecimal 1 (0001) Hexadecimal A (1010) Hexadecimal 3 (0011)</p>
+        <p>Binary number: <code>000110100011</code></p>
+      </div>
+    </section>
+    
+    
+
+    
+  </main>
+</body>
+</html>

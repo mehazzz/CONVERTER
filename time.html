@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Converter</title>
+  <style>
+    /* Internal CSS */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgb(185, 185, 185);
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .converter {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      text-align: center;
+      width: 300px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+      text-align: left;
+    }
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #0a0a0a;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #2d46b5;
+    }
+    p {
+      font-weight: bold;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="converter">
+    <h1>Time Converter</h1>
+    <label for="timeInput">Enter Time:</label>
+    <input type="number" id="timeInput" placeholder="Enter time">
+    
+    <label for="convertFrom">Convert From:</label>
+    <select id="convertFrom">
+      <option value="minutes">Minutes</option>
+      <option value="seconds">Seconds</option>
+      <option value="hours">Hours</option>
+      <option value="days">Days</option>
+      <option value="years">Years</option>
+    </select>
+
+    <label for="convertTo">Convert To:</label>
+    <select id="convertTo">
+      <option value="minutes">Minutes</option>
+      <option value="seconds">Seconds</option>
+      <option value="hours">Hours</option>
+      <option value="days">Days</option>
+      <option value="years">Years</option>
+    </select>
+    
+    <button onclick="convertTime()">Convert</button>
+    
+    <p id="result"></p>
+  </div>
+
+  <script>
+    // JavaScript for the conversion
+    function convertTime() {
+      const timeInput = parseFloat(document.getElementById('timeInput').value);
+      const convertFrom = document.getElementById('convertFrom').value;
+      const convertTo = document.getElementById('convertTo').value;
+      let result = 0;
+
+      // Convert input to minutes
+      let timeInMinutes = 0;
+      switch (convertFrom) {
+        case 'minutes':
+          timeInMinutes = timeInput;
+          break;
+        case 'seconds':
+          timeInMinutes = timeInput / 60;
+          break;
+        case 'hours':
+          timeInMinutes = timeInput * 60;
+          break;
+        case 'days':
+          timeInMinutes = timeInput * 24 * 60;
+          break;
+        case 'years':
+          timeInMinutes = timeInput * 365 * 24 * 60;
+          break;
+        default:
+          break;
+      }
+
+      // Convert minutes to desired output
+      switch (convertTo) {
+        case 'minutes':
+          result = timeInMinutes;
+          document.getElementById('result').innerText = `Result: ${result} minutes`;
+          break;
+        case 'seconds':
+          result = timeInMinutes * 60;
+          document.getElementById('result').innerText = `Result: ${result} seconds`;
+          break;
+        case 'hours':
+          result = timeInMinutes / 60;
+          document.getElementById('result').innerText = `Result: ${result} hours`;
+          break;
+        case 'days':
+          result = timeInMinutes / (24 * 60);
+          document.getElementById('result').innerText = `Result: ${result} days`;
+          break;
+        case 'years':
+          result = timeInMinutes / (365 * 24 * 60);
+          document.getElementById('result').innerText = `Result: ${result} years`;
+          break;
+        default:
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

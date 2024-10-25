@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperature Conversion</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #555;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .example {
+      background-color: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 1.1em;
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Temperature Conversion: Kelvin to Celsius & Fahrenheit</h1>
+  </header>
+  
+  <main>
+    <section id="kelvinToCelsius">
+      <h2>Kelvin to Celsius</h2>
+      <p>Formula: <code>K=°C+273.15</code></p>
+      <p>To convert Kelvin to Celsius:</p>
+      <ol>
+        <li>Simply subtract 273.15 from the Kelvin temperature.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Kelvin temperature <code>300K</code></p>
+        <p>Calculation: 300 - 273.15 = 26.85°C</p>
+      </div>
+    </section>
+
+    <section id="kelvinToFahrenheit">
+      <h2>Kelvin to Fahrenheit</h2>
+      <p>Formula: <code>K=(°F-32)×5/9+273.15</code></p>
+      <p>To convert Kelvin to Fahrenheit:</p>
+      <ol>
+        <li>Subtract 273.15 from the Kelvin temperature.</li>
+        <li>Multiply the result by 9/5.</li>
+        <li>Add 32 to the result.</li>
+      </ol>
+      <div class="example">
+        <p>Example: Kelvin temperature <code>300K</code></p>
+        <p>Calculation: (300 - 273.15) * 9/5 + 32 = 80.33°F</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
